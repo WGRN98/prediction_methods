@@ -1,1 +1,0 @@
-This is a program for the study and comparison of various predicticve methods. The dataset is Spains energy production by source and consumption. I have 4 years of data, where the first 3 are used as training data and the last year is for a comparison between predictions and real values. 
