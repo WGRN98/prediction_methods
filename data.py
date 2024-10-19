@@ -40,6 +40,9 @@ import os
 # change current working directory
 os.chdir(os.path.abspath(os.path.dirname(__file__)))
 
+if not os.path.exists('assets'):
+    os.makedirs('assets')
+
 #%% Data Import
 #Importing data
 energy=pd.read_csv('data/energy_final.csv')
