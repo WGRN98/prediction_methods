@@ -27,11 +27,11 @@ You will see 3 python files in the folder: import_data.py, data.py, app.py that 
 After creating the dashboard you can see all the graphs created and analyse them yourself, since the graphs are interactive.
 
 #### import_data.py
-This file processes the data initially, has to be the first one to be run, and only needs to be run once. It removes empty rows and removes unneccessary columns, like generation methods that Spain does not have (fossil oil shale, peat, geothermal, etc.). Since the weather information is divided by city it also joins the data, doing an average of all city and setting that weather data for the country. This file also passes all time information to a DateTime format for easier use.
+This file processes the data initially, has to be the first one to be run, and only needs to be run once. It removes empty rows and removes unnecessary columns, like generation methods that Spain does not have (fossil oil shale, peat, geothermal, etc.). Since the weather information is divided by city it also joins the data, doing an average of all city and setting that weather data for the country. This file also passes all time information to a DateTime format for easier use.
 
 #### data.py
 This is the file that does all the data analysis, if you want new sets of graphs run this file again. This file is the biggest one and does take a while to complete.
-In this file you will see that it takes csvs that where created in the import_data.py file and proceeds to create generation and load graphs and after it does elbow curves to help find out the ideal number of clusters in the data (that was 2). Then it creates 2 new features called load-1 and generation-1 that are the total load and generation in the previous hour, alongside creating an hour and wekday feature. It then does some cluster graphs that you will be able to see in the dashboard.
+In this file you will see that it takes CSVs that where created in the import_data.py file and proceeds to create generation and load graphs and after it does elbow curves to help find out the ideal number of clusters in the data (that was 2). Then it creates 2 new features called load-1 and generation-1 that are the total load and generation in the previous hour, alongside creating an hour and weekday feature. It then does some cluster graphs that you will be able to see in the dashboard.
 To choose the features that are more important and to then choose which ones to remain the program does a feature ranking, where we can see which ones affect each parameter the most. With the features chosen we can then do the data analysis with each of the methods, creating graphs to use in the dashboard.
 
 #### app.py
