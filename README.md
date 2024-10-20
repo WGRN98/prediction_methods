@@ -32,6 +32,7 @@ This file processes the data initially, has to be the first one to be run, and o
 #### data.py
 
 #### app.py
+This is the file that creates the dashboard that displays the graphs created during the data analysis. I chose to use dash at it is based on flask, so it could be run on a CS50 environment, but the CSS and HTML code can be easily condensed to a single file with the funcionality of python at the same time. Using plotly in the analysis and pickle to export the graphs to a file you can than make the graphs interactive in the dashboard. In the dashboard you can choose between total graphs for generation, load, price and weather. You can also see some scatter plots done and each prediction method individually for generation, load and price.
 
 ## Conclusions
 A large amount of the error can be attributed to daylight savings time, as the energy loads and generations see a 1 hour shift every time the daylight savings are changed.
