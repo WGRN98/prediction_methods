@@ -17,7 +17,7 @@ The methods that I chose where:
 
 I also wanted to use Support Vector Regressor, but the graphs would not work for this method. The code is still in the file, if you want to see it run uncomment it, but do not create graphs.
 
-After the program analyses the data you can create a dashboard to show the data with interactive graphs. I decided to use dash as it allows the code to be much more condensed, with the ability to create a complete dashboard with a single file. Since dash in based on Flask a CS50 envirnoment can be used to create the server.
+After the program analyses the data you can create a dashboard to show the data with interactive graphs. I decided to use dash as it allows the code to be much more condensed, with the ability to create a complete dashboard with a single file. Since dash in based on Flask a CS50 environment can be used to create the server.
 
 ### How to run the program, file info
 You will see 3 python files in the folder: import_data.py, data.py, app.py that should be used in the following order:
@@ -27,12 +27,13 @@ You will see 3 python files in the folder: import_data.py, data.py, app.py that 
 After creating the dashboard you can see all the graphs created and analyse them yourself, since the graphs are interactive.
 
 #### import_data.py
-This file processes the data initially, has to be the first one to be run, and only needs to be run once. It removes empty rows and removes uneccessary columns, like generation methods that Spain does not have (fossil oil shale, peat, geothermal, etc.). Since the weather information is divided by city it also joins the data, doing an average of all city and setting that weather data for the country. This file also passes all time information to a DateTime format for easier use.
+This file processes the data initially, has to be the first one to be run, and only needs to be run once. It removes empty rows and removes unneccessary columns, like generation methods that Spain does not have (fossil oil shale, peat, geothermal, etc.). Since the weather information is divided by city it also joins the data, doing an average of all city and setting that weather data for the country. This file also passes all time information to a DateTime format for easier use.
 
 #### data.py
+This is the file that does all the data analysis, if you want new sets of graphs run this file again. This file is the biggest one and does take a while to complete
 
 #### app.py
-This is the file that creates the dashboard that displays the graphs created during the data analysis. I chose to use dash at it is based on flask, so it could be run on a CS50 environment, but the CSS and HTML code can be easily condensed to a single file with the funcionality of python at the same time. Using plotly in the analysis and pickle to export the graphs to a file you can than make the graphs interactive in the dashboard. In the dashboard you can choose between total graphs for generation, load, price and weather. You can also see some scatter plots done and each prediction method individually for generation, load and price.
+This is the file that creates the dashboard that displays the graphs created during the data analysis. I chose to use dash at it is based on flask, so it could be run on a CS50 environment, but the CSS and HTML code can be easily condensed to a single file with the functionality of python at the same time. Using plotly in the analysis and pickle to export the graphs to a file you can than make the graphs interactive in the dashboard. In the dashboard you can choose between total graphs for generation, load, price and weather. You can also see some scatter plots done and each prediction method individually for generation, load and price.
 
 ## Conclusions
 A large amount of the error can be attributed to daylight savings time, as the energy loads and generations see a 1 hour shift every time the daylight savings are changed.
