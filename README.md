@@ -15,17 +15,23 @@ The methods that I chose where:
 - Bootstrapping
 - Neural Networks
 
-I also wanted to do Support Vector Regressor, but the graphs would not work for this method. The code is still in the file, if you want to see it run uncomment it, but do not create graphs.
+I also wanted to use Support Vector Regressor, but the graphs would not work for this method. The code is still in the file, if you want to see it run uncomment it, but do not create graphs.
 
-After the program analyses the data you can create a dashboard to show the data with interactive graphs. I decided to use dash as it allows the code to be much more condensed, with the ability to create a comlpete dashboard with a single file. Since dash in based on Flask a CS50 envirnoment can be used to create the server.
+After the program analyses the data you can create a dashboard to show the data with interactive graphs. I decided to use dash as it allows the code to be much more condensed, with the ability to create a complete dashboard with a single file. Since dash in based on Flask a CS50 envirnoment can be used to create the server.
 
-
-### How to run the program
+### How to run the program, file info
 You will see 3 python files in the folder: import_data.py, data.py, app.py that should be used in the following order:
 1. import_data.py, this file cleans the starting data by removing empty rows, unnecessary columns, joining the data and creating a final .csv for the data analysis;
 2. data.py, this file does the data analysis. It takes a while to run, don't worry. If you want new data for the dashboard rerun this file;
-3. app.py, this file crates the dashboard server that will present the graphs created during data analysis. Dash is based on flask so a cs50 environment can be used.
+3. app.py, this file crates the dashboard server that will present the graphs created during data analysis.
 After creating the dashboard you can see all the graphs created and analyse them yourself, since the graphs are interactive.
+
+#### import_data.py
+This file processes the data initially, has to be the first one to be run, and only needs to be run once. It removes empty rows and removes uneccessary columns, like generation methods that Spain does not have (fossil oil shale, peat, geothermal, etc.). Since the weather information is divided by city it also joins the data, doing an average of all city and setting that weather data for the country. This file also passes all time information to a DateTime format for easier use.
+
+#### data.py
+
+#### app.py
 
 ## Conclusions
 A large amount of the error can be attributed to daylight savings time, as the energy loads and generations see a 1 hour shift every time the daylight savings are changed.
